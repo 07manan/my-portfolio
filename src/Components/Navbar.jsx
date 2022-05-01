@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
 import "./comp.css";
 
 function Navbar() {
-  const [shownav, setShownav] = useState(false);
+  const [shownav, setShownav] = useState(true);
 
   return (
     <nav className="navbar">
@@ -11,20 +10,24 @@ function Navbar() {
         Manan
       </a>
       <div className="links" id={shownav ? "mobile-nav" : ""}>
-        <a style={{ animationDelay: "200ms" }} href="/about">
-          About
-        </a>
-        <a style={{ animationDelay: "400ms" }} href="/projects">
+        <a style={{ animationDelay: "200ms" }} href="#project">
           Projects
         </a>
-        <a style={{ animationDelay: "600ms" }} href="/skills">
+        <a style={{ animationDelay: "400ms" }} href="#about">
+          About
+        </a>
+        <a style={{ animationDelay: "600ms" }} href="#skills">
           skills
         </a>
-        <a style={{ animationDelay: "800ms" }} href="/contact">
+        <a style={{ animationDelay: "800ms" }} href="#contact">
           contact
         </a>
       </div>
-      <button onClick={() => setShownav(!shownav)}>open</button>
+      <button onClick={() => setShownav(!shownav)}>
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </button>
     </nav>
   );
 }

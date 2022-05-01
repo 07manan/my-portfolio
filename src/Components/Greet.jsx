@@ -1,7 +1,7 @@
 import React from "react";
 import AnimatedLetters from "./AnimatedLetters";
 
-function About() {
+function Greet() {
   const hi = ["H", "i", "i", ",", " ", "I", " ", "a", "m"];
   const name = ["M", "a", "n", "a", "n", " ", "P", "a", "t", "e", "l", "."];
   const job = [
@@ -51,16 +51,28 @@ function About() {
           <h2>
             <AnimatedLetters letterClass="hi" strArray={job} idx={21} />
           </h2>
+          <p className="exp">
+            I am Undergrad student studying Electronics and communication
+            Engineering(ECE) at
+            <br /> Indian Institute of Information Technology, Surat. I am a
+            relatively good reactJS developer and MERN-stack Developer
+          </p>
         </div>
       ) : (
         <div className="intro-simple">
           <p>Hii, I am</p>
           <h1>Manan Patel</h1>
           <h2>I build websites using ReactJS.</h2>
+          <p className="exp-simple">
+            I am Undergrad student studying Electronics and communication
+            Engineering(ECE) at Indian Institute of Information Technology,
+            Surat. I am a relatively good reactJS developer and MERN-stack
+            Developer
+          </p>
         </div>
       )}
     </div>
   );
 }
 
-export default About;
+export default Greet;
