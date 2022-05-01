@@ -9,7 +9,11 @@ function Navbar() {
       <a className="navbar-brand" href="/">
         Manan
       </a>
-      <div className="links" id={shownav ? "mobile-nav" : ""}>
+      <div
+        onClick={() => setShownav(!shownav)}
+        className="links"
+        id={shownav ? "mobile-nav" : ""}
+      >
         <a style={{ animationDelay: "200ms" }} href="#project">
           Projects
         </a>
