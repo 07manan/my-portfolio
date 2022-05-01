@@ -1,0 +1,183 @@
+:root {
+    --primary-colour: #64ffda;
+    --secondary-color: #8892b0;
+}
+
+body {
+    background-color: #0a192f;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    color: var(--primary-colour);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 250%;
+    margin-right: auto;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9%;
+}
+
+#mobile-nav {
+    display: flex;
+}
+
+.links a {
+    color: var(--primary-colour);
+    margin: 0 5%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slidedown 0.3s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes slidedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.links a:hover {
+    color: white;
+}
+
+
+.navbar {
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 5%;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar button {
+    display: none;
+}
+
+@media (max-width:700px) {
+
+    .links a {
+        font-size: 100%;
+    }
+}
+
+@media (max-width:525px) {
+
+    .navbar button {
+        position: relative;
+        display: flex;
+        height: fit-content;
+        width: 100px;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    /* .navbar {
+        align-items: flex-start;
+    } */
+
+    .links {
+        position: absolute;
+        flex-direction: column;
+        align-self: flex-start;
+        right: 0;
+        width: 75vw;
+        height: 100vh;
+        justify-content: space-around;
+        background-color: #071223;
+    }
+}
+
+/* About */
+
+#greet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    margin-top: 10%;
+}
+
+.intro-simple {
+    margin-top: 10%;
+}
+
+#greet p {
+    color: var(--primary-colour);
+    font-size: 125%;
+    height: fit-content;
+    margin: 0;
+}
+
+#greet h1 {
+    color: white;
+    font-size: 500%;
+    height: fit-content;
+    margin: 0;
+}
+
+#greet h2 {
+    color: rgba(255, 255, 255, 0.433);
+    font-size: 450%;
+    height: fit-content;
+    margin: 0;
+}
+
+
+/* Projects */
+
+#project {
+    margin-top: 25% !important;
+    margin: auto;
+    /* min-width: 500px; */
+    width: 75%;
+}
+
+#project h1 {
+    color: var(--primary-colour);
+}
+
+#project a {
+    text-decoration: none;
+    color: var(--primary-colour);
+}
+
+.project-olx {
+    border: 1px solid var(--primary-colour);
+    border-radius: 15px;
+    padding: 15px 50px;
+}
+
+
+.project-olx h2 {
+    color: white;
+}
+
+.project-olx p {
+    color: var(--secondary-color);
+}
