@@ -301,7 +301,6 @@ body {
 #project {
     margin: 15vw auto;
     width: 50%;
-    /* z-index: -1; */
 }
 
 #project h1 {
@@ -332,6 +331,19 @@ body {
 .project p {
     color: var(--secondary-color);
 }
+
+@media (max-width:750px) {
+    #project {
+        width: 75%;
+    }
+}
+
+@media (max-width:550px) {
+    #project {
+        width: 95%;
+    }
+}
+
 
 /* About */
 
@@ -369,16 +381,16 @@ body {
         padding: 3% 5%;
     }
 
-    /* #about h2 {
-        color: var(--primary-colour);
+}
+
+@media (max-width:900px) {
+    #about {
+        width: 55%;
     }
 
-    #about p {
-        color: var(--secondary-color);
-        width: calc(75%-100px)
-    } */
-
-
+    .text {
+        padding: 5vh 5vw;
+    }
 }
 
 @media (max-width:400px) {
