@@ -11,7 +11,7 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-github-square" />
+              <i className="fa-brands fa-github-square" />
             </a>
           </li>
           <li>
@@ -20,7 +20,7 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-linkedin" />
+              <i className="fa-brands fa-linkedin" />
             </a>
           </li>
           <li>
@@ -29,7 +29,7 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-instagram" />
+              <i className="fa-brands fa-instagram" />
             </a>
           </li>
           <li>
@@ -38,10 +38,19 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-whatsapp" />
+              <i className="fa-brands fa-whatsapp" />
             </a>
           </li>
         </ul>
+      </div>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor="#project"
+        className="scrolltotop"
+      >
+        <a href="#navbar">
+          <i className="fa-solid fa-angle-up" />
+        </a>
       </div>
       <p>Designed & built by Manan Patel</p>
     </div>

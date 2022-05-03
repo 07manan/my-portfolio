@@ -5,7 +5,7 @@ function Navbar() {
   const [shownav, setShownav] = useState(true);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <a className="navbar-brand" href="/">
         Manan
       </a>

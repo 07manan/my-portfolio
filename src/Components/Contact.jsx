@@ -29,44 +29,46 @@ function Contact() {
         </form>
         <div aos-data="fade-left" className="contactdetails">
           <table>
-            <tr>
-              <td>
-                <i class="fa-solid fa-location-dot" />
-              </td>
-              <td>
-                <a
-                  href="https://goo.gl/maps/ymRTngg9wbau1TM37"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Nava Revas, Idar, Gujarat 383450
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-phone" />
-              </td>
-              <td>
-                <a href="tel:+91 7069340884" target="_blank" rel="noreferrer">
-                  +91 7069340884
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fa-solid fa-envelope" />
-              </td>
-              <td>
-                <a
-                  href="mailto:07manan1850@gmailcom"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  07manan1850@gmail.com
-                </a>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <i className="fa-solid fa-location-dot" />
+                </td>
+                <td>
+                  <a
+                    href="https://goo.gl/maps/ymRTngg9wbau1TM37"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Nava Revas, Idar, Gujarat 383450
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i className="fa-solid fa-phone" />
+                </td>
+                <td>
+                  <a href="tel:+91 7069340884" target="_blank" rel="noreferrer">
+                    +91 7069340884
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i className="fa-solid fa-envelope" />
+                </td>
+                <td>
+                  <a
+                    href="mailto:07manan1850@gmailcom"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    07manan1850@gmail.com
+                  </a>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
