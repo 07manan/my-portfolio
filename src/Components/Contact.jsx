@@ -1,28 +1,56 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_wghu8pa",
+        "template_oon5utn",
+        form.current,
+        "sFlcX8HMdzYbdUL4x"
+      )
+      .then(
+        (result) => {
+          console.log(result);
+          form.current.name.value = "";
+          form.current.email.value = "";
+          form.current.phone.value = "";
+          form.current.message.value = "";
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
+
   return (
     <div id="contact">
       <div className="contact">
         <h2>Contact Me</h2>
-        <form className="form">
+        <form className="form" ref={form} onSubmit={sendEmail}>
           <div data-aos="fade-right" className="input">
             <p>Name:</p>
-            <input type="text" placeholder="Enter Name" />
+            <input type="text" name="name" placeholder="Enter Name" />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Email:</p>
-            <input type="email" placeholder="Enter Email" />
+            <input type="email" name="email" placeholder="Enter Email" />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Phone No.:</p>
-            <input type="number" placeholder="Enter Phone No." />
+            <input type="number" name="phone" placeholder="Enter Phone No." />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Message:</p>
             <textarea
               type="text"
-              placeholder="Why do you want to contact me?"
+              name="message"
+              placeholder="How can I help you?"
             />
           </div>
           <input type="submit" className="submit" value="Send" />
