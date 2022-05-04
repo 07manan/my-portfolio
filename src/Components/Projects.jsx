@@ -48,7 +48,7 @@ function Projects() {
           for every type of exam.
         </p>
       </div>
-      <div data-aos="fade-right" className="project project-admissionsathi">
+      <div data-aos="fade-up" className="project project-admissionsathi">
         <h2>Admission Sathi</h2>
         <a
           href="https://github.com/07manan/admissionsathi"

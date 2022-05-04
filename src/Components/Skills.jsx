@@ -2,7 +2,7 @@ import React from "react";
 
 function Skills() {
   return (
-    <div data-aos="zoom-out" data-aos-anchor-placement="top-bottom" id="skills">
+    <div data-aos="fade-up" data-aos-anchor-placement="top-center" id="skills">
       <div className="skills">
         <h1>Skills</h1>
         <div data-aos="fade-right" className="skill">

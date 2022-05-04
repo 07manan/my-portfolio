@@ -52,7 +52,15 @@ function Footer() {
           <i className="fa-solid fa-angle-up" />
         </a>
       </div>
-      <p>Designed & built by Manan Patel</p>
+      <p>
+        <a
+          href="https://github.com/07manan/my-portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Designed & built by Manan Patel
+        </a>
+      </p>
     </div>
   );
 }
