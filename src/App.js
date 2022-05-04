@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 
 import Greet from "./Components/Greet";
 import Navbar from "./Components/Navbar";
-import Projects from "./Components/Projects";
-import About from "./Components/About";
+// import Projects from "./Components/Projects";
+// import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
