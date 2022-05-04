@@ -20,8 +20,8 @@ function App() {
       <Navbar />
       <div className="app">
         <Greet />
-        <Projects />
-        <About />
+        {/* <Projects /> */}
+        {/* <About /> */}
         <Skills />
         <Contact />
         <Footer />
