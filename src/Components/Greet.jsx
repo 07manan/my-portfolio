@@ -56,7 +56,7 @@ function Greet() {
             Engineering(ECE) at
             <br /> Indian Institute of Information Technology, Surat. I am a
             relatively good <span>ReactJS</span> developer and
-            <span>MERN-stack</span> Developer
+            <span> MERN-stack</span> Developer
           </p>
         </div>
       ) : (
@@ -68,7 +68,7 @@ function Greet() {
             I am Undergrad student studying Electronics and communication
             Engineering(ECE) at Indian Institute of Information Technology,
             Surat. I am a relatively good <span>ReactJS</span> developer and
-            <span>MERN-stack</span> Developer
+            <span> MERN-stack</span> Developer
           </p>
         </div>
       )}
