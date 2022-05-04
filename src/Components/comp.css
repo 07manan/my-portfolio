@@ -482,35 +482,35 @@ body {
 .react-bar {
     height: inherit;
     width: 85%;
-    background-color: rgb(220, 20, 60);
+    background-color: #62adcb;
 }
 
 .express-bar {
     height: inherit;
     background-color: var(--primary-colour);
     width: 75%;
-    background-color: crimson;
+    background-color: #68b7d6;
 }
 
 .mern-bar {
     height: inherit;
     background-color: var(--primary-colour);
     width: 80%;
-    background-color: crimson;
+    background-color: #508ba2;
 }
 
 .html-bar {
     height: inherit;
     background-color: var(--primary-colour);
     width: 90%;
-    background-color: crimson;
+    background-color: #3d6777;
 }
 
 .js-bar {
     height: inherit;
     background-color: var(--primary-colour);
     width: 75%;
-    background-color: crimson;
+    background-color: #233d48;
 }
 
 @media (max-width:800px) {
