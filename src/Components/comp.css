@@ -8,6 +8,8 @@ html {
     --secondary-color: #8892b0;
     --backgroung-color: #0a192f;
     --tertiary-color: #112240;
+    --toastify-color-light: var(--tertiary-color) !important;
+    --toastify-color-success: var(--primary-colour) !important;
 }
 
 ::selection {
