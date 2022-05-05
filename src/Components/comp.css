@@ -181,7 +181,6 @@ body {
 
 #greet {
     display: flex;
-    /* margin-top: 80px; */
     width: 75vw;
     flex-direction: column;
     justify-content: center;
@@ -283,7 +282,7 @@ body {
     color: var(--secondary-color);
     margin-top: 5px;
     opacity: 0;
-    animation: slideup 0.5s 7s forwards;
+    animation: slideup 0.5s 7.3s forwards;
 }
 
 .exp span,
@@ -732,7 +731,7 @@ body {
 
     .social {
         opacity: 0;
-        animation: slideup 0.5s 7.5s forwards;
+        animation: slideup 0.5s 7.7s forwards;
     }
 }
 
