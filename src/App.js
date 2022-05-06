@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import Experience from "./Components/Experience";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
         <Greet />
         <Projects />
         <About />
+        <Experience />
         <Skills />
         <Contact />
         <Footer />

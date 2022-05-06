@@ -317,7 +317,7 @@ body {
 /* Projects */
 
 #project {
-    margin: 15vw auto;
+    margin: 20vh auto;
     width: 50%;
 }
 
@@ -380,7 +380,6 @@ body {
 
 #about p {
     color: var(--secondary-color);
-    /* width: calc(75vw-100px); */
     max-width: 90vw;
 }
 
@@ -439,12 +438,67 @@ body {
     }
 }
 
+/* Experience */
+
+#experience {
+    width: 58%;
+    margin-top: 20vh;
+}
+
+@media (max-width:700px) {
+    #experience {
+        width: 70%;
+    }
+}
+
+@media (max-width:550px) {
+    #experience {
+        width: 80%;
+    }
+}
+
+#experience h1 {
+    color: var(--primary-colour);
+}
+
+.vertical-timeline-element-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 150%;
+}
+
+.vertical-timeline-element-content {
+    background-color: var(--dark-backgroung-color) !important;
+}
+
+.vertical-timeline-element-title {
+    color: var(--primary-colour);
+}
+
+.vertical-timeline-element-subtitle {
+    color: var(--secondary-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+#description {
+    color: var(--secondary-color);
+}
+
+.vertical-timeline-element-date {
+    color: #9aa4c2;
+    font-style: italic;
+}
 
 /* Skills */
 
 #skills {
     width: 58%;
-    margin-top: 15vw;
+    margin-top: 20vh;
     background-color: var(--tertiary-color);
 }
 
@@ -531,7 +585,7 @@ body {
 .contact {
     width: 75vw;
     display: grid;
-    margin-top: 15vw;
+    margin-top: 20vh;
     justify-content: center;
     grid-template-columns: 6fr 6fr;
 }
@@ -620,7 +674,6 @@ body {
 
 .contactdetails table {
     width: 100%;
-    /* color: var(--secondary-color); */
 }
 
 .contactdetails table td {
