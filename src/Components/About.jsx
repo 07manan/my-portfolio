@@ -12,7 +12,7 @@ function About() {
         </p>
       </div>
       <div data-aos="fade-left" className="img">
-        <img src="my-img.webp" alt="..." />
+        <img src="myImg.webp" alt="..." />
       </div>
     </div>
   );
