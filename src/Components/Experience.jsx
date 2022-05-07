@@ -28,7 +28,7 @@ function App() {
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               icon={
                 isWorkIcon ? (
-                  <i class="fa-solid icon fa-laptop-code" />
+                  <i className="fa-solid icon fa-laptop-code" />
                 ) : (
                   <i className="fa-solid icon fa-graduation-cap" />
                 )
