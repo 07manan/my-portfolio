@@ -3,6 +3,8 @@
     transform: scale(0);
     animation: bounceIn 0.4s forwards;
     animation-duration: 0.8s;
+    white-space: nowrap;
+    line-height: 3vh;
     min-width: 10px;
 }
 
