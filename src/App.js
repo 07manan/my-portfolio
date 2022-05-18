@@ -18,6 +18,7 @@ function App() {
   }, []);
   return (
     <>
+      <div id="top" />
       <Navbar />
       <div className="app">
         <Greet />

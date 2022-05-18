@@ -45,10 +45,10 @@ function Footer() {
       </div>
       <div
         data-aos="fade-up"
-        data-aos-anchor="#project"
+        data-aos-anchor=".project"
         className="scrolltotop"
       >
-        <a href="#navbar">
+        <a href="#top">
           <i className="fa-solid fa-angle-up" />
         </a>
       </div>
