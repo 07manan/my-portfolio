@@ -27,10 +27,13 @@ function Navbar() {
           contact
         </a>
       </div>
-      <button onClick={() => setShownav(!shownav)}>
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
+      <button
+        className={shownav ? "" : "nav-button"}
+        onClick={() => setShownav(!shownav)}
+      >
+        <div className={shownav ? "bar1" : "bar1 cross1"}></div>
+        <div className={shownav ? "bar2" : "bar1 cross2"}></div>
+        <div className={shownav ? "bar3" : "bar1 cross3"}></div>
       </button>
     </nav>
   );

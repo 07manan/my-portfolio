@@ -143,24 +143,48 @@ body {
     }
 
     .navbar button {
+        padding: 0 1vw;
         position: absolute;
-        display: block;
+        display: flex;
+        height: 12vw;
+        width: 13vw;
+        justify-content: space-around;
+        flex-direction: column;
         grid-column: 4/5;
-        height: fit-content;
         background-color: var(--backgroung-color);
         border: 2px solid var(--primary-colour);
         border-radius: 5px;
+        transition: 0.4s;
     }
 
     .bar1,
     .bar2,
     .bar3 {
-        width: 35px;
+        width: 10vw;
         justify-self: end;
-        height: 5px;
+        height: 0.5vh;
         background-color: var(--primary-colour);
-        margin: 6px 0;
         transition: 0.4s;
+        transform-origin: right;
+    }
+
+    .nav-button {
+        width: 10vw;
+        /* border: 0px !important; */
+    }
+
+    .cross1 {
+        width: 11.5vw;
+        transform: translateX(-2vw) rotate(-40deg);
+    }
+
+    .cross2 {
+        opacity: 0;
+    }
+
+    .cross3 {
+        width: 11.5vw;
+        transform: translateX(-2vw) rotate(40deg);
     }
 
     #mobile-nav {
