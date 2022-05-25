@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,9 +6,12 @@ import "react-toastify/dist/ReactToastify.css";
 function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const [BtnDisable, setBtnDisable] = useState(false);
 
+  const sendEmail = (e) => {
+    console.log("send start");
+    setBtnDisable(true);
+    e.preventDefault();
     emailjs
       .sendForm(
         "service_wghu8pa",
@@ -44,6 +47,8 @@ function Contact() {
           });
         }
       );
+    setBtnDisable(false);
+    console.log("send end");
   };
 
   return (
@@ -71,7 +76,12 @@ function Contact() {
               placeholder="How can I help you?"
             />
           </div>
-          <input type="submit" className="submit" value="Send" />
+          <input
+            disabled={BtnDisable}
+            type="submit"
+            className="submit"
+            value="Send"
+          />
         </form>
         <div aos-data="fade-left" className="contactdetails">
           <table>
