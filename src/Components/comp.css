@@ -290,7 +290,7 @@ body {
 @keyframes slideup {
     0% {
         opacity: 0;
-        transform: translateY(50%);
+        transform: translateY(25%);
     }
 
     100% {
@@ -892,7 +892,13 @@ body {
 
     .social {
         opacity: 0;
-        animation: slideup 0.5s 7.7s forwards;
+        animation: fadeIn 0.5s 7.7s forwards;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
 
