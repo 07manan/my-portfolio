@@ -690,6 +690,14 @@ body {
     grid-template-columns: 6fr 6fr;
 }
 
+.Toastify__toast-container--top-right {
+    top: 80px;
+}
+
+.Toastify__toast-body {
+    color: var(--secondary-color);
+}
+
 .contact h2,
 .contact p {
     color: var(--primary-colour);
