@@ -170,6 +170,7 @@ body {
 
     .nav-button {
         width: 10vw;
+        /* border: 0px !important; */
     }
 
     .cross1 {
@@ -810,10 +811,6 @@ body {
 @media (max-width:400px) {
     .input {
         flex-direction: column;
-    }
-
-    .input p {
-        width: 100%;
     }
 
     .input input {

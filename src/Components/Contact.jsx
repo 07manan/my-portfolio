@@ -2,28 +2,10 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-
-const schema = yup.object().shape({
-  name: yup.string().required("Provide your name"),
-  email: yup.string().email().required("Please provide your email"),
-  phone: yup.string().required("Please provide your Phone No."),
-  message: yup
-    .string()
-    .required("Provide your message so that I can contact you"),
-});
 
 function Contact() {
   const form = useRef();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -68,36 +50,18 @@ function Contact() {
     <div id="contact">
       <div className="contact">
         <h2>Contact Me</h2>
-        <form className="form" ref={form} onSubmit={handleSubmit(sendEmail)}>
+        <form className="form" ref={form} onSubmit={sendEmail}>
           <div data-aos="fade-right" className="input">
             <p>Name:</p>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Name"
-              {...register("name")}
-            />
-            <p className="error">{errors.name?.message}</p>
+            <input type="text" name="name" placeholder="Enter Name" />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Email:</p>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              {...register("email")}
-            />
-            <p className="error">{errors.email?.message}</p>
+            <input type="email" name="email" placeholder="Enter Email" />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Phone No.:</p>
-            <input
-              type="number"
-              name="phone"
-              placeholder="Enter Phone No."
-              {...register("phone")}
-            />
-            <p className="error">{errors.phone?.message}</p>
+            <input type="number" name="phone" placeholder="Enter Phone No." />
           </div>
           <div data-aos="fade-right" className="input">
             <p>Message:</p>
@@ -105,9 +69,7 @@ function Contact() {
               type="text"
               name="message"
               placeholder="How can I help you?"
-              {...register("message")}
             />
-            <p className="error">{errors.message?.message}</p>
           </div>
           <input type="submit" className="submit" value="Send" />
         </form>
