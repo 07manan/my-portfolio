@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,11 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 function Contact() {
   const form = useRef();
 
-  const [BtnDisable, setBtnDisable] = useState(false);
-
   const sendEmail = (e) => {
-    console.log("send start");
-    setBtnDisable(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -47,8 +43,6 @@ function Contact() {
           });
         }
       );
-    setBtnDisable(false);
-    console.log("send end");
   };
 
   return (
@@ -76,12 +70,7 @@ function Contact() {
               placeholder="How can I help you?"
             />
           </div>
-          <input
-            disabled={BtnDisable}
-            type="submit"
-            className="submit"
-            value="Send"
-          />
+          <input type="submit" className="submit" value="Send" />
         </form>
         <div aos-data="fade-left" className="contactdetails">
           <table>
