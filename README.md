@@ -1,1 +1,1 @@
-Hosted website link: https://07manan.netlify.app/
+https://07manan.netlify.app/
