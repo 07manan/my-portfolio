@@ -13,6 +13,17 @@ html {
     --toastify-color-success: var(--primary-colour) !important;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #081323 inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--primary-colour) !important;
+}
+
 ::selection {
     color: white;
     background: #132c53;
@@ -703,7 +714,7 @@ body {
     grid-template-columns: 6fr 6fr;
 }
 
-.Toastify__toast-container--top-right {
+.Toastify__toast {
     top: 80px;
 }
 
@@ -742,6 +753,11 @@ body {
     border: none;
     color: var(--primary-colour);
     border-bottom: 2px solid var(--primary-colour);
+}
+
+.form .input input:focus,
+.form .input textarea:focus {
+    outline: 0 !important;
 }
 
 .form .input input[type=number]::-webkit-outer-spin-button,
