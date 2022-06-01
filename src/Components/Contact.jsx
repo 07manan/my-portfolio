@@ -7,12 +7,12 @@ function Contact() {
   const form = useRef();
   const [btnDisabled, setBtnDisabled] = React.useState(false);
 
-  const statechange = () => {
+  const disableBtn = () => {
     setBtnDisabled(true);
   };
 
   const sendEmail = (e) => {
-    statechange();
+    disableBtn();
     console.log(btnDisabled);
     e.preventDefault();
     emailjs
