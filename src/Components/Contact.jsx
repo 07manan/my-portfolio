@@ -5,8 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const form = useRef();
+  const [btnDisabled, setBtnDisabled] = React.useState(false);
+
+  const statechange = () => {
+    setBtnDisabled(true);
+  };
 
   const sendEmail = (e) => {
+    statechange();
+    console.log(btnDisabled);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -70,7 +77,12 @@ function Contact() {
               placeholder="How can I help you?"
             />
           </div>
-          <input type="submit" className="submit" value="Send" />
+          <input
+            disabled={btnDisabled}
+            type="submit"
+            className="submit"
+            value="Send"
+          />
         </form>
         <div aos-data="fade-left" className="contactdetails">
           <table>
