@@ -781,9 +781,10 @@ body {
     background-color: var(--primary-colour);
     border: 2px solid var(--primary-colour);
     padding: 5px 15px;
-    width: fit-content;
+    width: 6em;
     align-self: center;
     cursor: pointer;
+    transition: 0.3s;
     font-size: large;
     color: var(--backgroung-color);
     font-weight: 400;

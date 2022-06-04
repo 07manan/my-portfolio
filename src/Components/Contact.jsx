@@ -2,18 +2,17 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { IoMdDoneAll } from "react-icons/io";
 
 function Contact() {
   const form = useRef();
   const [btnDisabled, setBtnDisabled] = React.useState(false);
-
   const disableBtn = () => {
     setBtnDisabled(true);
   };
 
   const sendEmail = (e) => {
     disableBtn();
-    console.log(btnDisabled);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -77,12 +76,9 @@ function Contact() {
               placeholder="How can I help you?"
             />
           </div>
-          <input
-            disabled={btnDisabled}
-            type="submit"
-            className="submit"
-            value="Send"
-          />
+          <button disabled={btnDisabled} type="submit" className="submit">
+            {btnDisabled ? <IoMdDoneAll /> : "Send"}
+          </button>
         </form>
         <div aos-data="fade-left" className="contactdetails">
           <table>
