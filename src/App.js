@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Aos from "aos";
+import "./App.css";
 import "aos/dist/aos.css";
 
 import Greet from "./Components/Greet";
