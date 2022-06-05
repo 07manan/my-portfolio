@@ -397,22 +397,6 @@ body {
 }
 
 
-/* @media (max-width:1000px) {
-
-    .intro-simple,
-    .intro {
-        font-size: 65%;
-    }
-}
-
-@media (max-width:860px) {
-
-    .intro-simple,
-    .intro {
-        font-size: 55%;
-    }
-} */
-
 @media (max-width:835px) {
 
     .intro-simple {
@@ -489,9 +473,6 @@ body {
     background-color: var(--tertiary-color);
 }
 
-.img img {
-    max-width: 100%;
-}
 
 #about h2 {
     color: var(--primary-colour);
@@ -507,12 +488,9 @@ body {
         text-align: left;
         width: 58%;
         margin: auto;
-        display: grid;
-        grid-template-columns: 7fr 5fr;
     }
 
     #about .text {
-        grid-column: 1/2;
         padding: 3% 5%;
     }
 
@@ -550,11 +528,6 @@ body {
         width: calc(75%-100px)
     }
 
-    .img {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
 }
 
 /* Experience */

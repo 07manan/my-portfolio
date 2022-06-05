@@ -12,9 +12,6 @@ function About() {
           dicta deserunt magni maiores, at possimus. Ad, harum vitae?
         </p>
       </div>
-      <div data-aos="zoom-out" className="img">
-        <img src="myImg.webp" alt="..." />
-      </div>
     </div>
   );
 }
