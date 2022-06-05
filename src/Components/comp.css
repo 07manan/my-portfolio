@@ -18,6 +18,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #081323 inset !important;
+    box-shadow: 0 0 0 30px #081323 inset !important;
 }
 
 input:-webkit-autofill {
@@ -175,7 +176,6 @@ body {
         flex-direction: column;
         grid-column: 4/5;
         background-color: transparent;
-        /* border: 2px solid var(--primary-colour); */
         box-shadow: 0;
         border-radius: 5px;
         transition: 0.4s;
