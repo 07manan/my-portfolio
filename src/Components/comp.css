@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 9vh;
     font-family: 'Kanit', sans-serif;
 }
 
@@ -42,8 +43,6 @@ input:-webkit-autofill {
 
 body {
     background-color: var(--backgroung-color);
-    margin: 0;
-    padding: 0;
     max-width: 100vw !important;
 }
 

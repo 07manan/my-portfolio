@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav className="navbar" id="navbar">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="#top">
         Manan
       </a>
       <div

@@ -1,13 +1,26 @@
-import React from "react";
+import React, { Suspense } from "react";
+import "./App.css";
 import ReactDOM from "react-dom/client";
-// import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+const App = React.lazy(() => import("./App"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <BrowserRouter>
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<Loading />}>
+      <App />
+    </Suspense>
   </React.StrictMode>
-  // </BrowserRouter>
 );
+
+function Loading() {
+  return (
+    <div className="loading">
+      <div className="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  );
+}
