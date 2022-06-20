@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import Aos from "aos";
+import React from "react";
 import "./App.css";
-import "aos/dist/aos.css";
 
 import Greet from "./Components/Greet";
 import Navbar from "./Components/Navbar";
@@ -13,20 +11,39 @@ import Footer from "./Components/Footer";
 import Experience from "./Components/Experience";
 
 function App() {
-  useEffect(() => {
-    Aos.init({});
+  const [offsetY, setOffsetY] = React.useState(0);
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }; // eslint-disable-next-line
   }, []);
+
   return (
     <>
-      <div id="top" />
       <Navbar />
       <div className="app">
-        <Greet />
-        <Projects />
-        <About />
-        <Experience />
-        <Skills />
-        <Contact />
+        {offsetY >= 0 && offsetY <= window.innerHeight ? <Greet /> : null}
+        {offsetY >= window.innerHeight && offsetY <= window.innerHeight * 2 ? (
+          <Projects />
+        ) : null}
+        {offsetY >= window.innerHeight * 2 &&
+        offsetY <= window.innerHeight * 3 ? (
+          <About />
+        ) : null}
+        {offsetY >= window.innerHeight * 3 &&
+        offsetY <= window.innerHeight * 4 ? (
+          <Experience />
+        ) : null}
+        {offsetY >= window.innerHeight * 4 &&
+        offsetY <= window.innerHeight * 5 ? (
+          <Skills />
+        ) : null}
+        {offsetY >= window.innerHeight * 5 ? <Contact /> : null}
         <Footer />
       </div>
     </>

@@ -1,103 +1,76 @@
 import React from "react";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import { DiCss3Full, DiGit, DiSass } from "react-icons/di";
+import { SiJavascript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { IoLogoNodejs } from "react-icons/io";
+import { SiNetlify } from "react-icons/si";
 
 function Skills() {
+  const skills = [
+    {
+      name: "React",
+      icon: <FaReact />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+    },
+    {
+      name: "HTML",
+      icon: <AiFillHtml5 />,
+    },
+    {
+      name: "CSS",
+      icon: <DiCss3Full />,
+    },
+    {
+      name: "Github",
+      icon: <AiFillGithub />,
+    },
+    {
+      name: "Git",
+      icon: <DiGit />,
+    },
+    {
+      name: "SASS",
+      icon: <DiSass />,
+    },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript />,
+    },
+    {
+      name: "NodeJS",
+      icon: <IoLogoNodejs />,
+    },
+    {
+      name: "Netlify",
+      icon: <SiNetlify />,
+    },
+  ];
+
   return (
-    <div data-aos="fade-up" data-aos-anchor-placement="top-center" id="skills">
+    <div id="skills">
       <div className="skills">
-        <h1>Skills</h1>
-        <div className="skill">
-          <div className="skillname">ReactJS</div>
-          <div className="skill-lvl react-lvl">
-            <div data-aos="zoom-in-right" className="react-bar">
-              8.5/10
-            </div>
-          </div>
-        </div>
-
-        <div className="skill">
-          <div className="skillname">ExpressJS</div>
-          <div className="skill-lvl express-lvl">
-            <div data-aos="zoom-in-right" className="express-bar">
-              7.5/10
-            </div>
-          </div>
-        </div>
-
-        <div className="skill">
-          <div className="skillname">MERN</div>
-          <div className="skill-lvl mern-lvl">
-            <div data-aos="zoom-in-right" className="mern-bar">
-              8/10
-            </div>
-          </div>
-        </div>
-
-        <div className="skill">
-          <div className="skillname">HTML</div>
-          <div className="skill-lvl html-lvl">
-            <div data-aos="zoom-in-right" className="html-bar">
-              9/10
-            </div>
-          </div>
-        </div>
-
-        <div className="skill">
-          <div className="skillname">JavaScript</div>
-          <div className="skill-lvl js-lvl">
-            <div data-aos="zoom-in-right" className="js-bar">
-              7.5/10
-            </div>
-          </div>
+        <h1 className="animateIn">Skills</h1>
+        <p className="animateIn-secondary">
+          The skills, tools and technologies I use to bring Websites to life:
+        </p>
+        <div className="skill-icons">
+          {skills.map((skill, i) => {
+            return (
+              <div key={skill.name + i} className={`skill __${i} `}>
+                {skill.icon}
+                <h2 style={{ fontWeight: "500" }}>{skill.name}</h2>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
-
-// function Skills() {
-//   return (
-//     <div data-aos="zoom-out" data-aos-anchor-placement="top-bottom" id="skills">
-//       <h1>Skills</h1>
-//       <div className="bar-graph bar-graph-horizontal bar-graph-one">
-//         <div className="bar-one">
-//           <span className="skill">ReactJS</span>
-//           <div
-//             className="bar"
-//             data-aos="slide-right"
-//             data-aos-anchor-placement="top-bottom"
-//             data-percentage="85%"
-//           ></div>
-//         </div>
-//         <div className="bar-two">
-//           <span className="skill">ExpressJS</span>
-//           <div
-//             className="bar"
-//             data-aos="slide-right"
-//             data-aos-anchor-placement="top-bottom"
-//             data-percentage="75%"
-//           ></div>
-//         </div>
-//         <div className="bar-three">
-//           <span className="skill">MERN</span>
-//           <div
-//             className="bar"
-//             data-aos="slide-right"
-//             data-aos-anchor-placement="top-bottom"
-//             data-percentage="80%"
-//           ></div>
-//         </div>
-//         <div className="bar-four">
-//           <span className="skill">HTML</span>
-//           <div
-//             className="bar"
-//             data-aos="slide-right"
-//             data-aos-anchor-placement="top-bottom"
-//             data-percentage="90%"
-//           ></div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default Skills;

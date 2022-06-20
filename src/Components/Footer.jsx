@@ -43,15 +43,13 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor=".project"
+      {/* <div
         className="scrolltotop"
       >
         <a href="#top">
           <i className="fa-solid fa-angle-up" />
         </a>
-      </div>
+      </div> */}
       <p>
         <a
           href="https://github.com/07manan/my-portfolio"

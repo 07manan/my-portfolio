@@ -1,14 +1,14 @@
 let ExperienceElements = [
   {
     id: 1,
-    title: (
-      <a href="http://iiitsurat.ac.in/" target="_blank" rel="noreferrer">
-        Indian Institute of Information Technology
+    title: "B.Tech (ECE)",
+    location: (
+      <a href="http://www.iiitsurat.ac.in/" target="_blank" rel="noreferrer">
+        Indian Institute of Information Technology(IIIT)-Surat, Gujarat
       </a>
     ),
-    location: "Surat, Gujarat",
     description: "B. Tech. degree in Electronics and Communication Engineering",
-    date: "December 2020 - present",
+    duration: "December 2020 - present",
     icon: "school",
   },
   {
@@ -20,10 +20,10 @@ let ExperienceElements = [
       </a>
     ),
     description:
-      "During the Internship, I developed ReactJS components for one of their products,Vision Web, which is an all-in-one IoT dashboard.",
-    date: "May 2022 - present",
+      "During the Internship, I developed ReactJS components for one of their product,Vision Web, which is an all-in-one IoT dashboard.",
+    duration: "May 2022 - present",
     icon: "work",
   },
 ];
 
-export default ExperienceElements;
+export default ExperienceElements.reverse();

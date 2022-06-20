@@ -8,7 +8,6 @@
     min-width: 10px;
 }
 
-
 @keyframes bounceIn {
   from,
   20%,
@@ -49,6 +48,139 @@
   
   @for $i from 0 to 52 {
     .text-animate._#{$i}{
-      animation-delay: calc(#{$i+15}s/10);
+      animation-delay: calc(#{$i+5}s/10);
     }
   }
+
+
+  /* animation-primary */
+  .animateIn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    background-color: var(--primary-colour);
+    animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s 1 normal forwards running animateIn;
+  }
+  
+  @keyframes animateIn {
+    50% {
+        left: 0;
+        width: 100%;
+    }
+  
+    100% {
+        width: 0;
+        left: 100%;
+    }
+  }
+  
+  .animateIn {
+    position: relative;
+    width: fit-content;
+    animation: colorIn 1s 0.2s 1 ease-in forwards;
+  }
+  
+  @keyframes colorIn {
+    50% {
+        color: transparent;
+    }
+  
+    51%,
+    100% {
+        color: var(--primary-colour);
+    }
+  }
+
+// animation-white
+
+.animateIn-white::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: white;
+  animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s 1 normal forwards running animateIn;
+}
+
+
+
+.animateIn-white {
+  position: relative;
+  width: fit-content;
+  animation: colorInWhite 1s 0.2s 1 ease-in forwards;
+}
+
+@keyframes colorInWhite {
+  50% {
+      color: rgba(255, 255, 255, 0);
+  }
+
+  51%,
+  100% {
+      color: white;
+  }
+}
+
+
+// animate-secondary
+
+.animateIn-secondary::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: #8892b0;
+  animation: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s 1 normal forwards running animateIn;
+}
+
+
+
+.animateIn-secondary {
+  position: relative;
+  width: fit-content;
+  animation: colorInSecondary 1s 0.2s 1 ease-in forwards;
+}
+
+@keyframes colorInSecondary {
+  50% {
+      color: rgba(255, 255, 255, 0);
+  }
+
+  51%,
+  100% {
+      color: #8892b0;
+  }
+}
+
+
+// Skill flipin
+.skill{
+  animation: flipIn .5s ease-in forwards;
+
+}
+
+@keyframes flipIn {
+
+  100% {
+      transform: rotateY(0deg);
+      opacity: 1;
+  }
+}
+
+  
+@for $i from 0 to 12 {
+  .__#{$i}{
+    animation-delay: calc(#{$i+15}s/15);
+  }
+}
+

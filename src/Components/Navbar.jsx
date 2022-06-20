@@ -6,29 +6,44 @@ function Navbar() {
 
   return (
     <nav className="navbar" id="navbar">
-      <a className="navbar-brand" href="#top">
+      <p className="navbar-brand" onClick={() => window.scrollTo(0, 0)}>
         Manan
-      </a>
+      </p>
       <div
         onClick={() => setShownav(!shownav)}
         className="links"
         id={shownav ? "mobile-nav" : ""}
       >
-        <a style={{ animationDelay: "200ms" }} href="#project">
+        <p
+          style={{ animationDelay: "200ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight + 1)}
+        >
           Projects
-        </a>
-        <a style={{ animationDelay: "400ms" }} href="#about">
+        </p>
+        <p
+          style={{ animationDelay: "400ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight * 2 + 1)}
+        >
           About
-        </a>
-        <a style={{ animationDelay: "600ms" }} href="#experience">
-          Experience
-        </a>
-        <a style={{ animationDelay: "800ms" }} href="#skills">
+        </p>
+        <p
+          style={{ animationDelay: "600ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight * 3 + 1)}
+        >
+          Exp. & Edu.
+        </p>
+        <p
+          style={{ animationDelay: "800ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight * 4 + 1)}
+        >
           Skills
-        </a>
-        <a style={{ animationDelay: "1000ms" }} href="#contact">
+        </p>
+        <p
+          style={{ animationDelay: "1000ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight * 5 + 1)}
+        >
           Contact
-        </a>
+        </p>
       </div>
       <div
         id="ham"

@@ -1,6 +1,8 @@
 import React from "react";
 import AnimatedLetters from "./AnimatedLetters";
 
+import { BsChevronDown } from "react-icons/bs";
+
 function Greet() {
   const hi = ["H", "i", "i", ",", " ", "I", " ", "a", "m"];
   const name = ["M", "a", "n", "a", "n", " ", "P", "a", "t", "e", "l", "."];
@@ -13,7 +15,7 @@ function Greet() {
   return (
     <div id="greet">
       <div className="intro">
-        <p>
+        <p className="hii-p">
           <AnimatedLetters letterClass="hi" strArray={hi} idx={0} />
         </p>
         <h1>
@@ -43,6 +45,11 @@ function Greet() {
           <br /> Indian Institute of Information Technology, Surat. I am a
           relatively good <span>ReactJS</span> developer and
           <span> MERN-stack</span> Developer
+        </p>
+        <p className="downarrow">
+          <BsChevronDown
+            onClick={() => window.scrollTo(0, window.innerHeight + 1)}
+          />
         </p>
       </div>
     </div>
