@@ -205,13 +205,21 @@ body {
         transform-origin: right;
     }
 
+    .bar1 {
+        transform: scaleX(0.7);
+    }
+
+    .bar2 {
+        transform: scaleX(0.5);
+    }
+
     .nav-button {
         width: 10vw;
     }
 
     .cross1 {
         width: 11.2vw;
-        transform: rotate(-405deg);
+        transform: scaleX(1) rotate(-405deg);
     }
 
     .cross2 {
@@ -561,6 +569,53 @@ body {
 
 .and-span:hover::after {
     content: ">";
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+    animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+            -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
 }
 
 @media (max-width:500px) {
@@ -723,21 +778,42 @@ body {
 }
 
 .submit {
-    background-color: var(--primary-colour);
+    background-color: transparent;
     border: 2px solid var(--primary-colour);
     padding: 5px 15px;
     width: 6em;
     align-self: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: color 0.2s;
     font-size: large;
-    color: var(--backgroung-color);
+    /* color: var(--backgroung-color); */
+    color: var(--primary-colour);
     font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.submit::before {
+    content: "";
+    position: absolute;
+    background-color: var(--primary-colour);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: left;
+}
+
+.submit:hover:before {
+    transform: scaleX(1.01);
 }
 
 .submit:hover {
     background-color: transparent;
-    color: var(--primary-colour);
+    color: var(--backgroung-color);
 }
 
 .form .input input:focus,
