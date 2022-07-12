@@ -59,7 +59,7 @@ function Projects() {
           </a>
           <br />
           <a
-            href="https://jayshreeram.netlify.app/"
+            href="https://admissioncouncelling.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
