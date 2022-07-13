@@ -475,6 +475,25 @@ body {
     margin: 5vh 0 0 2vw;
 }
 
+.resume-btn {
+    background-color: var(--backgroung-color);
+    border: 1px solid var(--primary-colour);
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.resume-btn:hover {
+    background-color: #64ffdb3c;
+}
+
+.resume-btn a {
+    text-decoration: none;
+    color: var(--primary-colour);
+}
+
 @media (min-width:900px) {
     #about {
         text-align: left;
