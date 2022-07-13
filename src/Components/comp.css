@@ -475,8 +475,9 @@ body {
     margin: 5vh 0 0 2vw;
 }
 
-.resume-btn {
+.resume-link button {
     background-color: var(--backgroung-color);
+    color: var(--primary-colour);
     border: 1px solid var(--primary-colour);
     border-radius: 10px;
     padding: 1vh 2vw;
@@ -485,13 +486,12 @@ body {
     transition: all 0.15s ease-in-out;
 }
 
-.resume-btn:hover {
+.resume-link button:hover {
     background-color: #64ffdb3c;
 }
 
-.resume-btn a {
+.resume-link {
     text-decoration: none;
-    color: var(--primary-colour);
 }
 
 @media (min-width:900px) {

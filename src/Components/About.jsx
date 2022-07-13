@@ -10,11 +10,14 @@ function About() {
           delectus deleniti quae officiis quo id facere, nam eos debitis quasi
           dicta deserunt magni maiores, at possimus. Ad, harum vitae?
         </p>
-        <button className="resume-btn">
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
-        </button>
+        <a
+          href="/resume.pdf"
+          className="resume-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>Resume</button>
+        </a>
       </div>
     </div>
   );
