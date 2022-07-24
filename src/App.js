@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar offsetY={offsetY} />
       <div className="app">
         {offsetY >= 0 && offsetY <= window.innerHeight ? <Greet /> : null}
         {offsetY >= window.innerHeight && offsetY <= window.innerHeight * 2 ? (

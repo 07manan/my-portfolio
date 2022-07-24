@@ -8,7 +8,7 @@ let ExperienceElements = [
       </a>
     ),
     description: "B. Tech. degree in Electronics and Communication Engineering",
-    duration: "December 2020 - present",
+    duration: "Dec 2020 - present",
     icon: "school",
   },
   {
@@ -21,7 +21,7 @@ let ExperienceElements = [
     ),
     description:
       "During the Internship, I developed ReactJS components for one of their product,Vision Web, which is an all-in-one IoT dashboard.",
-    duration: "May 2022 - present",
+    duration: "May 2022 - July 2022",
     icon: "work",
   },
 ];

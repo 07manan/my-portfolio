@@ -6,12 +6,17 @@ import { FaReact } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io";
 import { SiNetlify } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 
 function Skills() {
   const skills = [
     {
       name: "React",
       icon: <FaReact />,
+    },
+    {
+      name: "NextJS",
+      icon: <SiNextdotjs />,
     },
     {
       name: "MongoDB",

@@ -51,23 +51,6 @@ function Contact() {
       );
   };
 
-  // const copyEmail = async () => {
-  //   try {
-  //     await navigator.clipboard.writeText("07manan1850@gmail.com");
-  //     toast.success("Email copied to clipboard", {
-  //       position: "top-right",
-  //       autoClose: 5000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   return (
     <div id="contact">
       <div className="contact">

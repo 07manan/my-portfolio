@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./comp.css";
 
-function Navbar() {
-  const [shownav, setShownav] = useState(true);
+function Navbar({ offsetY }) {
+  const [hidenav, setHideNav] = useState(true);
+  var scrollProgress = (offsetY / (window.innerHeight * 6)) * 100;
 
   return (
     <nav className="navbar" id="navbar">
@@ -10,9 +11,9 @@ function Navbar() {
         Manan
       </p>
       <div
-        onClick={() => setShownav(!shownav)}
+        onClick={() => setHideNav(!hidenav)}
         className="links"
-        id={shownav ? "mobile-nav" : ""}
+        id={hidenav ? "mobile-nav" : ""}
       >
         <p
           style={{ animationDelay: "200ms" }}
@@ -47,13 +48,17 @@ function Navbar() {
       </div>
       <div
         id="ham"
-        className={shownav ? "" : "nav-button"}
-        onClick={() => setShownav(!shownav)}
+        className={hidenav ? "" : "nav-button"}
+        onClick={() => setHideNav(!hidenav)}
       >
-        <div className={shownav ? "bar1" : "bar1 cross1"}></div>
-        <div className={shownav ? "bar2" : "bar1 cross2"}></div>
-        <div className={shownav ? "bar3" : "bar1 cross3"}></div>
+        <div className={hidenav ? "bar1" : "bar1 cross1"}></div>
+        <div className={hidenav ? "bar2" : "bar1 cross2"}></div>
+        <div className={hidenav ? "bar3" : "bar1 cross3"}></div>
       </div>
+      <div
+        className="scroll-progress"
+        style={{ width: `${scrollProgress}vw` }}
+      />
     </nav>
   );
 }
