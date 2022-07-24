@@ -670,7 +670,7 @@ body {
     }
 
     .experience h2[data-after]::after {
-        bottom: -20%;
+        bottom: -35%;
         right: 0;
     }
 
