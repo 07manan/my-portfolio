@@ -449,7 +449,7 @@ body {
 
 .project h2 {
     color: transparent;
-    font-size: 2em;
+    font-size: 3rem;
 }
 
 .project p {
@@ -463,10 +463,14 @@ body {
     }
 
     #project h1 {
-        font-size: 3em;
+        font-size: 3rem;
         margin-bottom: -5vh !important;
         white-space: nowrap;
         height: fit-content;
+    }
+
+    .project h2 {
+        font-size: 2rem;
     }
 }
 
@@ -540,7 +544,7 @@ body {
     }
 
     #about h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
 
@@ -566,7 +570,7 @@ body {
 
 .experience h2 {
     color: transparent;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .experience h2[data-after]::after {
@@ -660,7 +664,7 @@ body {
     }
 
     .experiences h1 {
-        font-size: 2rem !important;
+        font-size: 3rem !important;
         margin-bottom: 8vh !important;
     }
 
@@ -694,7 +698,7 @@ body {
 
 .skills h1 {
     color: transparent;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .skills p {
@@ -734,6 +738,10 @@ body {
 @media (max-width:800px) {
     #skills {
         font-size: 70%;
+    }
+
+    .skills h1 {
+        font-size: 3rem;
     }
 
     .skill {
