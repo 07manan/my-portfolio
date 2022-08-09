@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import { DiCss3Full, DiGit, DiSass } from "react-icons/di";
+import { DiCss3Full, DiGit } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
@@ -37,10 +37,6 @@ function Skills() {
     {
       name: "Git",
       icon: <DiGit />,
-    },
-    {
-      name: "SASS",
-      icon: <DiSass />,
     },
     {
       name: "JavaScript",
