@@ -4,7 +4,7 @@ import "./App.css";
 import Greet from "./Components/Greet";
 import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects";
-import About from "./Components/About";
+// import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
@@ -33,17 +33,20 @@ function App() {
         ) : null}
         {offsetY >= window.innerHeight * 2 &&
         offsetY <= window.innerHeight * 3 ? (
-          <About />
+          // <About />
+          <Experience />
         ) : null}
         {offsetY >= window.innerHeight * 3 &&
         offsetY <= window.innerHeight * 4 ? (
-          <Experience />
+          // <Experience />
+          <Skills />
         ) : null}
         {offsetY >= window.innerHeight * 4 &&
         offsetY <= window.innerHeight * 5 ? (
-          <Skills />
+          // <Skills />
+          <Contact />
         ) : null}
-        {offsetY >= window.innerHeight * 5 ? <Contact /> : null}
+        {/* {offsetY >= window.innerHeight * 5 ? <Contact /> : null} */}
         <Footer />
       </div>
     </>

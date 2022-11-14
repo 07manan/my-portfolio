@@ -3,7 +3,7 @@ import "./comp.css";
 
 function Navbar({ offsetY }) {
   const [hidenav, setHideNav] = useState(true);
-  var scrollProgress = (offsetY / (window.innerHeight * 6)) * 100;
+  var scrollProgress = (offsetY / (window.innerHeight * 5)) * 100;
 
   return (
     <nav className="navbar" id="navbar">
@@ -21,27 +21,27 @@ function Navbar({ offsetY }) {
         >
           Projects
         </p>
-        <p
+        {/* <p
           style={{ animationDelay: "400ms" }}
           onClick={() => window.scrollTo(0, window.innerHeight * 2 + 1)}
         >
           About
+        </p> */}
+        <p
+          style={{ animationDelay: "400ms" }}
+          onClick={() => window.scrollTo(0, window.innerHeight * 2 + 1)}
+        >
+          Exp. & Edu.
         </p>
         <p
           style={{ animationDelay: "600ms" }}
           onClick={() => window.scrollTo(0, window.innerHeight * 3 + 1)}
         >
-          Exp. & Edu.
+          Skills
         </p>
         <p
           style={{ animationDelay: "800ms" }}
           onClick={() => window.scrollTo(0, window.innerHeight * 4 + 1)}
-        >
-          Skills
-        </p>
-        <p
-          style={{ animationDelay: "1000ms" }}
-          onClick={() => window.scrollTo(0, window.innerHeight * 5 + 1)}
         >
           Contact
         </p>
