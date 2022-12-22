@@ -21,12 +21,6 @@ function Navbar({ offsetY }) {
         >
           Projects
         </p>
-        {/* <p
-          style={{ animationDelay: "400ms" }}
-          onClick={() => window.scrollTo(0, window.innerHeight * 2 + 1)}
-        >
-          About
-        </p> */}
         <p
           style={{ animationDelay: "400ms" }}
           onClick={() => window.scrollTo(0, window.innerHeight * 2 + 1)}
