@@ -50,14 +50,13 @@ body {
 
 #root {
     max-width: 100vw;
-    height: 600vh;
+    /* height: 600vh; */
 }
 
 /* App */
 
 .app {
-    position: fixed;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 
@@ -132,6 +131,7 @@ body {
     height: 10vh;
     justify-content: space-around;
     background-color: #0a192f98;
+    backdrop-filter: blur(4px);
 }
 
 .navbar a {
@@ -280,10 +280,7 @@ body {
 #experience,
 #skills,
 #contact {
-    position: relative;
     height: 100vh;
-    width: 100vw;
-    display: grid;
 }
 
 /* Greet */
@@ -755,6 +752,10 @@ body {
 
 /* Contact */
 
+#contact {
+    width: 99vw;
+}
+
 .contact {
     margin: 10vh 0 0vh 10vw;
     /* display: grid;
@@ -947,7 +948,6 @@ body {
     width: 100%;
     color: var(--secondary-color);
     height: 80px;
-    margin-top: 15vw;
 }
 
 #footer p a {

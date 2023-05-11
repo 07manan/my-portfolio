@@ -49,10 +49,10 @@ function Navbar({ offsetY }) {
         <div className={hidenav ? "bar2" : "bar1 cross2"}></div>
         <div className={hidenav ? "bar3" : "bar1 cross3"}></div>
       </div>
-      <div
+      {/* <div
         className="scroll-progress"
         style={{ width: `${scrollProgress}vw` }}
-      />
+      /> */}
     </nav>
   );
 }

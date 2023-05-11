@@ -43,14 +43,12 @@ function Footer() {
           </li>
         </ul>
       </div>
-      {/* <div
-        className="scrolltotop"
-      >
+      <div className="scrolltotop">
         <a href="#top">
           <i className="fa-solid fa-angle-up" />
         </a>
-      </div> */}
-      {/* <p>
+      </div>
+      <p>
         <a
           href="https://github.com/07manan/my-portfolio"
           target="_blank"
@@ -58,7 +56,7 @@ function Footer() {
         >
           Designed & built by Manan Patel
         </a>
-      </p> */}
+      </p>
     </div>
   );
 }

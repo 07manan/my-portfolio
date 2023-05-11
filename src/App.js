@@ -27,26 +27,11 @@ function App() {
     <>
       <Navbar offsetY={offsetY} />
       <div className="app">
-        {offsetY >= 0 && offsetY <= window.innerHeight ? <Greet /> : null}
-        {offsetY >= window.innerHeight && offsetY <= window.innerHeight * 2 ? (
-          <Projects />
-        ) : null}
-        {offsetY >= window.innerHeight * 2 &&
-        offsetY <= window.innerHeight * 3 ? (
-          // <About />
-          <Experience />
-        ) : null}
-        {offsetY >= window.innerHeight * 3 &&
-        offsetY <= window.innerHeight * 4 ? (
-          // <Experience />
-          <Skills />
-        ) : null}
-        {offsetY >= window.innerHeight * 4 &&
-        offsetY <= window.innerHeight * 5 ? (
-          // <Skills />
-          <Contact />
-        ) : null}
-        {/* {offsetY >= window.innerHeight * 5 ? <Contact /> : null} */}
+        <Greet />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
         <Footer />
       </div>
     </>
