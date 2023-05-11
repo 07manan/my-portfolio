@@ -14,7 +14,7 @@ function Skills() {
   const [visible, setVisible] = useState(false);
   const ref = useRef();
   useEffect(() => {
-    setRef(ref);
+    setRef(ref); // eslint-disable-next-line
   }, []);
   useEffect(() => {
     if (inView) {
@@ -76,7 +76,7 @@ function Skills() {
           {skills.map((skill, i) => {
             return (
               <div
-                key={skill.name + i}
+                key={skill.name + i} // eslint-disable-next-line
                 className={`${visible ? "skillIn" : null} __${i} ` + "skill"}
               >
                 {skill.icon}

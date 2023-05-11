@@ -1,6 +1,6 @@
 import "./comp.css";
 
-import ExperienceElements from "../ExperienceElements";
+import { ExperienceElements } from "../data";
 import useInView from "../hooks/useInView";
 import { useEffect, useRef, useState } from "react";
 
@@ -9,7 +9,7 @@ function App() {
   const [visible, setVisible] = useState(false);
   const ref = useRef();
   useEffect(() => {
-    setRef(ref);
+    setRef(ref); // eslint-disable-next-line
   }, []);
   useEffect(() => {
     if (inView) {

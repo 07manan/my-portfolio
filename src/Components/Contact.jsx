@@ -10,7 +10,7 @@ function Contact() {
   const [visible, setVisible] = useState(false);
   const ref = useRef();
   useEffect(() => {
-    setRef(ref);
+    setRef(ref); // eslint-disable-next-line
   }, []);
   useEffect(() => {
     if (inView) {

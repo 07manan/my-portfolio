@@ -132,7 +132,7 @@ body {
     height: 10vh;
     justify-content: space-around;
     background-color: #0a192f98;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(7px);
 }
 
 .navbar a {
@@ -271,6 +271,11 @@ body {
     }
 }
 
+.nav-buffer {
+    width: 100%;
+    height: 7vh;
+}
+
 /* Common for all screens */
 
 
@@ -358,6 +363,7 @@ body {
 .downarrow {
     width: inherit;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     margin-top: 5vh !important;
 }
@@ -755,7 +761,9 @@ body {
 
 #contact {
     width: 99vw;
+    height: fit-content;
 }
+
 
 .contact {
     margin: 10vh 0 0vh 10vw;

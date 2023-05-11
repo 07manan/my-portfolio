@@ -1,6 +1,8 @@
 import React from "react";
 
 function Footer() {
+  // to do
+  // style footer
   return (
     <div id="footer">
       <div className="social">

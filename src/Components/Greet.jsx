@@ -1,7 +1,7 @@
 import React from "react";
 import AnimatedLetters from "./AnimatedLetters";
 
-import { BsChevronDown } from "react-icons/bs";
+import { BsMouse } from "react-icons/bs";
 
 function Greet() {
   const hi = ["H", "i", "i", ",", " ", "I", " ", "a", "m"];
@@ -47,9 +47,7 @@ function Greet() {
           <span> MERN-stack</span> Developer.
         </p>
         <p className="downarrow">
-          <BsChevronDown
-            onClick={() => window.scrollTo(0, window.innerHeight + 1)}
-          />
+          <BsMouse onClick={() => window.scrollTo(0, window.innerHeight + 1)} />
         </p>
       </div>
     </div>

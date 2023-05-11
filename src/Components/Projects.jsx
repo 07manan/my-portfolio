@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import useInView from "../hooks/useInView";
+import { Projects as ProjectList } from "../data";
 
 function Projects() {
   const { setRef, inView } = useInView({ threshold: 0.5 });
   const [visible, setVisible] = useState(false);
   const ref = useRef();
   useEffect(() => {
-    setRef(ref);
+    setRef(ref); // eslint-disable-next-line
   }, []);
   useEffect(() => {
     if (inView) {
@@ -18,7 +19,7 @@ function Projects() {
   return (
     <div id="project" ref={ref}>
       <h1 className={visible ? "animateIn" : ""}>Projects</h1>
-      <div className="project project-olx">
+      {/* <div className="project project-olx">
         <h2 className={visible ? "animateIn-white" : ""}>OLX Clone</h2>
         <div
           className={visible ? "animateIn" : ""}
@@ -51,41 +52,39 @@ function Projects() {
           <br /> Full functional olx clone where user can login, register, list
           an item for selling, contact other sellers to buy their items.
         </p>
-      </div>
-      <div className="project project-admissionsathi">
-        <h2 className={visible ? "animateIn-white" : ""}>Admission Sathi</h2>
-        <div
-          className={visible ? "animateIn" : ""}
-          style={{
-            display: "flex",
-            width: "3.5rem",
-            justifyContent: "space-between",
-          }}
-        >
-          <a
-            href="https://github.com/07manan/admissionsathi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiGithub size={20} className="icon" />
-          </a>
-          <br />
-          <a
-            href="https://admissioncouncelling.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaExternalLinkAlt size={20} />
-          </a>
-        </div>
-        <p className={visible ? "animateIn-secondary" : ""}>
-          A project made with pure <span>ReactJS</span>, with integrated{" "}
-          <span>Google Form</span> to contact owner of the webiste
-          <br /> Full functional career councelling webiste where students can
-          check the websites of different colleges and get councelling after
-          12th
-        </p>
-      </div>
+      </div> */}
+      {ProjectList.map((project) => {
+        return (
+          <div className="project" key={project.id}>
+            <h2 className={visible ? "animateIn-white" : ""}>
+              {project.title}
+            </h2>
+            <div
+              className={visible ? "animateIn" : ""}
+              style={{
+                display: "flex",
+                width: "3.5rem",
+                justifyContent: "space-between",
+              }}
+            >
+              {project.githubLink && (
+                <a href={project.githubLink} target="_blank" rel="noreferrer">
+                  <FiGithub size={20} />
+                </a>
+              )}
+              {project.hostedLink && (
+                <a href={project.hostedLink} target="_blank" rel="noreferrer">
+                  <FaExternalLinkAlt size={20} />
+                </a>
+              )}
+            </div>
+            <p
+              className={visible ? "animateIn-secondary" : ""}
+              dangerouslySetInnerHTML={{ __html: project.description }}
+            ></p>
+          </div>
+        );
+      })}
     </div>
   );
 }
