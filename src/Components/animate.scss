@@ -153,7 +153,7 @@
 
 @keyframes colorInSecondary {
   50% {
-      color: rgba(255, 255, 255, 0);
+      color: transparent;
   }
 
   51%,
@@ -164,9 +164,8 @@
 
 
 // Skill flipin
-.skill{
+.skillIn{
   animation: flipIn .5s ease-in forwards;
-
 }
 
 @keyframes flipIn {

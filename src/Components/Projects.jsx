@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import useInView from "../hooks/useInView";
 
 function Projects() {
+  const { setRef, inView } = useInView({ threshold: 0.5 });
+  const [visible, setVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    setRef(ref);
+  }, []);
+  useEffect(() => {
+    if (inView) {
+      setVisible(true);
+    }
+  }, [inView]);
   return (
-    <div id="project">
-      <h1 className="animateIn">Projects</h1>
+    <div id="project" ref={ref}>
+      <h1 className={visible ? "animateIn" : ""}>Projects</h1>
       <div className="project project-olx">
-        <h2 className="animateIn-white">OLX Clone</h2>
+        <h2 className={visible ? "animateIn-white" : ""}>OLX Clone</h2>
         <div
-          className="animateIn"
+          className={visible ? "animateIn" : ""}
           style={{
             display: "flex",
             width: "3.5rem",
@@ -32,7 +44,7 @@ function Projects() {
             <FaExternalLinkAlt size={20} />
           </a>
         </div>
-        <p className="animateIn-secondary">
+        <p className={visible ? "animateIn-secondary" : ""}>
           A project made with <span>MERN-Stact</span> (<span>ReactJS</span> for
           frontend and <span>ExpressJS</span> for backend and{" "}
           <span>MongoDB</span> as Database).
@@ -41,9 +53,9 @@ function Projects() {
         </p>
       </div>
       <div className="project project-admissionsathi">
-        <h2 className="animateIn-white">Admission Sathi</h2>
+        <h2 className={visible ? "animateIn-white" : ""}>Admission Sathi</h2>
         <div
-          className="animateIn"
+          className={visible ? "animateIn" : ""}
           style={{
             display: "flex",
             width: "3.5rem",
@@ -66,7 +78,7 @@ function Projects() {
             <FaExternalLinkAlt size={20} />
           </a>
         </div>
-        <p className="animateIn-secondary">
+        <p className={visible ? "animateIn-secondary" : ""}>
           A project made with pure <span>ReactJS</span>, with integrated{" "}
           <span>Google Form</span> to contact owner of the webiste
           <br /> Full functional career councelling webiste where students can

@@ -2,17 +2,14 @@ import { useCallback } from "react";
 import { useState } from "react";
 import { useRef } from "react";
 
-const useInView = ({ viewOnce = true, ...rest }) => {
-  //   console.log("rest", rest);
+const useInView = ({ viewOnce = false, ...rest }) => {
   const { root, rootMargin, threshold } = rest;
   const [state, setState] = useState({
     inView: false,
     entry: null,
     observer: null,
   });
-  const instanceRef = useRef(null);
   const targetRef = useRef(null);
-  //   const thresholds = useLatest(threshold);
   const callback = useCallback(
     ([entry], observer) => {
       const inView =
@@ -29,21 +26,18 @@ const useInView = ({ viewOnce = true, ...rest }) => {
 
   const setRef = useCallback(
     (node) => {
-      //   console.log("node", node);
       if (node) {
         const observer = new IntersectionObserver(callback, {
-          root: node.current,
+          root,
           rootMargin,
           threshold: threshold,
         });
-        console.log("observer", observer);
-        // node.current.observe(node);
+        observer.observe(node.current);
         targetRef.current = node;
       }
     },
-    [root, rootMargin, callback]
+    [root, rootMargin, threshold, callback]
   );
-
   return { setRef, ...state };
 };
 

@@ -1,6 +1,7 @@
 html {
     scroll-padding-top: 9vh;
     font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -422,7 +423,7 @@ body {
     margin: 10vh 0 0 10vw;
 }
 
-#project a {
+#project .animateIn a {
     text-decoration: none;
     color: transparent;
     animation: colorIn 1s 0.2s 1 ease-in forwards;
@@ -438,7 +439,7 @@ body {
     justify-content: space-around;
 }
 
-.project span {
+.project .animateIn-secondary span {
     color: transparent;
     animation: colorIn 1s 1 ease-in forwards;
 }

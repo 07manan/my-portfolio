@@ -1,10 +1,23 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoMdDoneAll } from "react-icons/io";
+import useInView from "../hooks/useInView";
 
 function Contact() {
+  const { setRef, inView } = useInView({ threshold: 0.35 });
+  const [visible, setVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    setRef(ref);
+  }, []);
+  useEffect(() => {
+    if (inView) {
+      setVisible(true);
+    }
+  }, [inView]);
+
   const form = useRef();
   const [btnDisabled, setBtnDisabled] = React.useState(false);
   const disableBtn = () => {
@@ -52,9 +65,9 @@ function Contact() {
   };
 
   return (
-    <div id="contact">
+    <div id="contact" ref={ref}>
       <div className="contact">
-        <h1 className="animateIn">Contact Me</h1>
+        <h1 className={visible ? "animateIn" : null}>Contact Me</h1>
         <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="input">
             <p>Name:</p>
