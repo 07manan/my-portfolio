@@ -960,7 +960,7 @@ body {
     align-items: center;
     width: 100%;
     color: var(--secondary-color);
-    background-color: #06101e;
+    background-color: var(--dark-backgroung-color);
     height: fit-content;
     padding: 1em 0;
 }
