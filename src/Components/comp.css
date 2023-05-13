@@ -433,7 +433,10 @@ body {
     text-decoration: none;
     color: transparent;
     animation: colorIn 1s 0.2s 1 ease-in forwards;
+}
 
+#project .animateIn a:visited {
+    color: transparent;
 }
 
 .project {

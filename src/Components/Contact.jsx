@@ -71,21 +71,32 @@ function Contact() {
         <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="input">
             <p>Name:</p>
-            <input type="text" name="name" placeholder="Enter Name" />
+            <input type="text" name="name" placeholder="Enter Name" required />
           </div>
           <div className="input">
             <p>Email:</p>
-            <input type="email" name="email" placeholder="Enter Email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+            />
           </div>
           <div className="input">
             <p>Phone No.:</p>
-            <input type="number" name="phone" placeholder="Enter Phone No." />
+            <input
+              type="number"
+              name="phone"
+              placeholder="Enter Phone No."
+              required
+            />
           </div>
           <div className="input">
             <p>Message:</p>
             <textarea
               type="text"
               name="message"
+              required
               placeholder="How can I help you?"
             />
           </div>
