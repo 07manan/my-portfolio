@@ -1,19 +1,18 @@
 export const Projects = [
   {
     id: 1,
-    title: "Attendance Tracker",
+    title: "Present Track",
     githubLink: "https://github.com/07manan/present_sir",
     hostedLink: "https://present-sir.vercel.app/",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, porro illo, praesentium debitis iste delectus dicta sequi officia magni rerum saepe amet exercitationem numquam ad, distinctio est eos dignissimos recusandae.",
+      "Attendance Track Web App is a dynamic <span>Next.js</span> application, leveraging <span>Firebase</span> as the database, specifically designed for educational institutions. With distinct user roles - <span>Admin, Teacher,</span> and <span>Student</span>, it enables smooth batch and teacher registration, streamlined attendance management, and real-time tracking. An efficient solution for hassle-free attendance monitoring in educational settings.",
   },
   {
     id: 2,
-    title: "OLX Clone",
+    title: "Listify",
     githubLink: "https://github.com/07manan/olx",
     description: `
-        A project made with <span>MERN-Stact</span>. Full functional olx clone where user can login, register,
-        list an item for selling, contact other sellers to buy their items.
+    A remarkable <span>MERN-Stack</span> project offering a fully functional replica of OLX. Users can seamlessly <span>sign in, register,</span> and <span>list items for sale</span>. Empowering potential buyers, it enables effortless communication with sellers to purchase desired items. A comprehensive clone that revolutionizes online buying and selling experiences.
     `,
   },
 ];
