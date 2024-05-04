@@ -7,6 +7,7 @@ import { SiMongodb } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io";
 import { SiNetlify } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
+import { TbBinaryTree } from "react-icons/tb";
 import useInView from "../hooks/useInView";
 
 function Skills() {
@@ -23,6 +24,10 @@ function Skills() {
   }, [inView]);
 
   const skills = [
+    {
+      name: "DSA",
+      icon: <TbBinaryTree />,
+    },
     {
       name: "React",
       icon: <FaReact />,

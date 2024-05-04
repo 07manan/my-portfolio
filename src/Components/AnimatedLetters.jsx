@@ -1,7 +1,8 @@
 import React from "react";
 import "./animate.scss";
 
-function AnimatedLetters({ letterClass, strArray, idx }) {
+function AnimatedLetters({ letterClass, word, idx }) {
+  let strArray = word.split("");
   return (
     <span>
       {strArray.map((char, i) => {
